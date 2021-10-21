@@ -1,15 +1,137 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 0.625em 2.8em 0.625em 1.875em;
+	background-color: $color_withe;
+	border-bottom: 0.0625em solid #F7F7F7;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 80px;
 
-	&__content {
-		@extend .container_center;
-		margin: auto;
+	&__left {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+		min-width: 0;
+		flex-grow: 1;
+		max-width: 58.7em;
+		margin-right: 2em;
 	}
+
+	&__title {
+		font-size: 2em;
+		font-weight: 400;
+		margin: 0 1em 0 0;
+	}
+
+	&__sub {}
+
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+
+	&__notice {
+		display: flex;
+		align-items: center;
+		margin-right: 0.15em;
+
+		[class*="icon_"] {
+			color: #C9C9C9;
+			text-decoration: none;
+			font-size: 1.3125em;
+			margin-right: 1.4em;
+
+			&:hover {
+				color: rgba(30, 89, 225, 0.5);
+			}
+		}
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		position: relative;
+		border-left: 1px solid #F7F7F7;
+		padding: 0.3em 0 0.3em 1.2em;
+		cursor: pointer;
+
+		&:after {
+			font-family: 'rsdo';
+			content: $icon_caret_down;
+			font-size: 0.4em;
+			margin-left: 3.2em;
+			position: relative;
+			top: -0.8em;
+		}
+
+		&.open {
+			color: #1E59E1;
+
+			&:after {
+				transform: rotate(180deg);
+			}
+
+			.header__userDrop {
+				display: block;
+			}
+		}
+
+		&Photo {
+			flex: none;
+			margin-right: 0.625em;
+			width: 2.5em;
+			height: 2.5em;
+			border-radius: 50%;
+			overflow: hidden;
+
+			img {
+				display: block;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&Descr {}
+
+		&Name {
+			font-size: 1.125em;
+			margin-bottom: 0.0625em;
+		}
+
+		&Info {
+			color: #BCBCBC;
+			font-size: 0.75em;
+		}
+
+		&Drop {
+			display: none;
+			position: absolute;
+			margin-top: 0.9em;
+			top: 100%;
+			left: 0;
+			background: #FFFFFF;
+			border: 0.0625em solid #F7F7F7;
+			box-sizing: border-box;
+			box-shadow: 0 1.5625em 2.8125em rgba(0, 0, 0, 0.05);
+			width: 100%;
+		}
+
+		&Link {
+			display: block;
+			text-decoration: none;
+			color: #848994;
+			padding: 1em 1.875em;
+
+			i {
+				color: #1E59E1;
+				margin-right: 0.85em;
+			}
+		}
+	}
+
 }
 
 // stiky menu

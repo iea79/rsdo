@@ -4,14 +4,43 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
+	// display: flex;
 
 	&__item {
 		// display: inline-block;
-		margin: 5px;
+		margin: 0 -1px 1.35em 0;
+
+		&:last-child {
+			// margin: 0 -1px 0 0;
+		}
 	}
 
-	&__link {}
+	&__link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 0.3em 1.8em 0.2em 3.8em;
+		text-decoration: none;
+		color: $main_color;
+		line-height: 126.5%;
+
+		[class*="icon_"] {
+			font-size: 0.9em;
+			width: 1.3em;
+			margin-right: 0.5em;
+			color: #1E59E1;
+		}
+
+		&.active {
+			color: #1E59E1;
+
+			border-right: 2px solid;
+		}
+
+		&:hover {
+			color: #1E59E1;
+		}
+	}
 
 	&__toggle {
 		@media (max-width: 767px) {

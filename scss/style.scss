@@ -5,12 +5,14 @@
  * Skype: ivanov_ea
  *
  */
+
 @import 'mixins/mixin'; // Fonts
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900); // Mixin for include fonts
 @include font-face("ArialMT", 'fonts/CenturyGothic', normal, normal);
 // Import files
 @import 'variables/variables';
 @import 'core/reset';
+@import 'core/icons';
 @import 'core/template';
 @import 'core/header';
 @import 'core/navbar';
@@ -22,3 +24,188 @@
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
+
+.page {
+    &__title {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin: 0 0 0.585em;
+    }
+}
+
+.aside {
+    flex: none;
+    width: 18.75em;
+    background: $color_withe;
+    border-right: 0.125em solid #F7F7F7;
+
+    &__head {
+        border-bottom: 0.0625em solid #F7F7F7;
+        height: 8.44em;
+        display: flex;
+        align-items: center;
+        padding: 2.88em 3.75em 1.875em 3.95em;
+    }
+
+    &__nav {
+        padding: 1.7em 0;
+    }
+}
+
+.childList {
+    position: relative;
+
+    &.open {
+        .childList {
+            &__current {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &__drop {
+                display: block;
+            }
+        }
+    }
+
+    &__current {
+        display: flex;
+        align-items: center;
+        padding-right: 1em;
+        cursor: pointer;
+
+        &:after {
+            font-family: 'rsdo';
+            content: $icon_caret_down;
+            color: #1E59E1;
+            font-size: 0.3em;
+            margin-left: 0.4em;
+        }
+    }
+
+    &__item {
+        padding: 0.6875em 0.625em;
+        font-size: 1em;
+        line-height: 1.26;
+        color: #1E59E1;
+        text-decoration: none;
+        background: $color_withe;
+        display: block;
+
+        i {
+            font-size: 0.875em;
+            margin-right: 0.5625em;
+        }
+
+        &.selected {
+            color: #848994;
+
+            i {
+                color: #1E59E1;
+            }
+        }
+    }
+
+    &__drop {
+        display: none;
+        min-width: 100%;
+        position: absolute;
+        margin-top: 1.15em;
+        z-index: 2;
+        background: #FFFFFF;
+        border: 0.0625em solid #F7F7F7;
+        box-sizing: border-box;
+        box-shadow: 0 1.5625em 2.8125em rgba(0, 0, 0, 0.05);
+
+        .childList__item {
+            &:nth-child(n+2) {
+                border-top: 1px solid #F7F7F7;
+            }
+
+            &:hover:not(.selected) {
+                background: #1E59E1;
+                color: $color_withe;
+            }
+        }
+    }
+
+}
+
+.submenu {
+    list-style: none;
+    margin: 2em 0 0;
+    padding: 1.5em 0;
+    border-top: 1px solid #F7F7F7;
+    border-bottom: 1px solid #F7F7F7;
+
+    &.open {
+        background: rgba(#1E59E1, 0.04);
+        border-color: rgba(#1E59E1, 0.04);
+    }
+
+    &__item {
+        padding: 0 3.7em;
+    }
+
+    &__drop {
+        display: none;
+
+        .open & {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0 0 0 1.8em;
+            margin: 0;
+        }
+
+        li {}
+
+        a {
+            color: $main_color;
+            padding: 0.4em 0.8em;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 0.9em;
+
+            &:hover:not(.active) {
+                color: #1E59E1;
+            }
+
+            &.active {
+                color: $color_withe;
+                background: #1E59E1;
+            }
+        }
+    }
+
+    &__curent {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5em;
+        cursor: pointer;
+
+        .open & {
+            color: #1E59E1;
+        }
+
+        i {
+            font-size: 0.875em;
+            margin-right: 0.96em;
+            color: #1E59E1;
+        }
+
+        &:after {
+            font-family: 'rsdo';
+            content: $icon_caret_down;
+            font-size: 0.3em;
+            margin-left: 1.3em;
+
+            .open & {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

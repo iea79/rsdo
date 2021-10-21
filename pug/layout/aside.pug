@@ -1,0 +1,72 @@
+aside.aside
+    .aside__head
+        a.logo(href="/")
+            img(src="img/logo.svg", alt="alt")
+
+    nav.aside__nav
+        -
+            nav = [
+                {
+                    icon: 'icon_dashboard', 
+                    name: 'Главная', 
+                    href: 'home.html'
+                },
+                {
+                    icon: 'icon_home', 
+                    name: 'Домашняя', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_calendar', 
+                    name: 'Календарь/расписание', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_speech', 
+                    name: 'Успеваемость', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_social_media', 
+                    name: 'Класс/учебная группа', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_pie_chart', 
+                    name: 'Аналитика и отчеты', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_filter', 
+                    name: 'Управление ОО', 
+                    href: ''
+                },
+                {
+                    icon: 'icon_sliders', 
+                    name: 'Администрирование', 
+                    href: ''
+                },
+            ]
+        ul.navbar
+            each navLink in nav
+                - active = '';
+                if navLink.name === pageName
+                    - active = 'active';
+                li.navbar__item
+                    a.navbar__link(href=navLink.href class=active)
+                        i(class=navLink.icon) 
+                        span=navLink.name
+
+        ul.submenu
+            li.submenu__item
+                .submenu__curent 
+                    i.icon_book 
+                    | Предметы
+                .submenu__drop
+                    ul
+                        each item, i in ['Все курсы', 'Математика', 'Физика', 'Технология', 'Математика']
+                            - active = '';
+                            if i === 0
+                                - active = 'active';
+                            li
+                                a(href="" class=active)=item

@@ -1,19 +1,26 @@
 -var version = '0.1';
+
+block variables
+    - pageName = "Главная";
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        title РСДО
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
 
         link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
     body
-        include header.pug
-
-        main.main_content
-            block content
-
-        include footer.pug
+        include aside.pug
+        main.main
+            include header.pug
+            .main__content
+                block content
+            include footer.pug
 
         include scripts.pug

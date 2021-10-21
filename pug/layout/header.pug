@@ -1,10 +1,34 @@
 header.header
-    .header__content
-        .header__left
-            a.logo(href="/")
-                img(src="img/logo.png", alt="alt")
-        nav.header__right
-            ul.navbar
-                each navLink in [{name: 'Page1', href: ''},{name: 'Page2', href: ''},{name: 'Page3', href: ''},{name: 'Page4', href: ''},]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+    .header__left
+        .header__title Главная
+        .header__sub
+            .childList.js-drop
+                .childList__current
+                    .childList__item
+                        i.icon_settings
+                        | Милонов А. А.
+                .childList__drop.js-drop-list
+                    a.childList__item.selected(href="")
+                        i.icon_settings
+                        | Милонов А. А.
+                    a.childList__item(href="")
+                        i.icon_settings
+                        | Милонов Б.А.
+                    a.childList__item(href="")
+                        i.icon_settings
+                        | Милонова В.А.
+    .header__right
+        .header__notice
+            a.icon_search(href="")
+            a.icon_chat(href="")
+            a.icon_bell(href="")
+        .header__user.js-drop
+            .header__userPhoto
+                img(src="img/ava.png", alt="")
+            .header__userDescr
+                .header__userName Светлана Абрамчук
+                .header__userInfo Родитель (детей 3)
+            .header__userDrop.js-drop-list
+                a.header__userLink(href="")
+                    i.icon_exit 
+                    span Выход из аккаунта

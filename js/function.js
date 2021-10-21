@@ -35,10 +35,6 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 
-    // Inputmask.js
-    // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
-    // formSubmit();
-
     checkOnResize();
 
 });
@@ -54,51 +50,6 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
 }
-
-// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-function stikyMenu() {
-    let HeaderTop = $('header').offset().top + $('.home').innerHeight();
-    let currentTop = $(window).scrollTop();
-
-    setNavbarPosition();
-
-    $(window).scroll(function(){
-        setNavbarPosition();
-    });
-
-    function setNavbarPosition() {
-        currentTop = $(window).scrollTop();
-
-        if( currentTop > HeaderTop ) {
-            $('header').addClass('stiky');
-        } else {
-            $('header').removeClass('stiky');
-        }
-
-        $('.navbar__link').each(function(index, el) {
-            let section = $(this).attr('href');
-
-            if ($('section').is(section)) {
-                let offset = $(section).offset().top;
-
-                if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
-                    $(this).addClass('active');
-                } else {
-                    $(this).removeClass('active');
-                }
-            }
-        });
-    }
-}
-
-function openMobileNav() {
-    $('.navbar__toggle').on('click', function() {
-        let wrapp = $('.nav');
-
-        wrapp.toggleClass('open');
-    });
-}
-openMobileNav();
 
 // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 function srollToId() {
@@ -141,219 +92,29 @@ function checkDirectionScroll() {
 }
 checkDirectionScroll();
 
-// Видео youtube для страницы
-function uploadYoutubeVideo() {
-    if ($(".js-youtube")) {
+function toggleDropdown() {
+    let drop = '.js-drop';
 
-        $(".js-youtube").each(function () {
-            // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-            $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+    $(drop).on('click', function() {
+        $(this).toggleClass('open');
+    });
 
-            // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-            $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+    $('.js-drop-list').on('mouseleave', function() {
+        $(this).closest(drop).removeClass('open');
+    });
 
-        });
+    $('body').on('click', function(e){
+        if ( $(e.target).closest(drop).length ) {
+            return;
+        }
+        $(drop).removeClass('open');
+    });
+}
+toggleDropdown();
 
-        $('.video__play, .video__prev').on('click', function () {
-            // создаем iframe со включенной опцией autoplay
-            let wrapp = $(this).closest('.js-youtube'),
-                videoId = wrapp.attr('id'),
-                iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-
-            if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
-
-            // Высота и ширина iframe должны быть такими же, как и у родительского блока
-            let iframe = $('<iframe/>', {
-                'frameborder': '0',
-                'src': iframe_url,
-                'allow': "autoplay"
-            })
-
-            // Заменяем миниатюру HTML5 плеером с YouTube
-            $(this).closest('.video__wrapper').append(iframe);
-
-        });
-    }
-};
-
-
-// Деление чисел на разряды Например из строки 10000 получаем 10 000
-// Использование: thousandSeparator(1000) или используем переменную.
-// function thousandSeparator(str) {
-//     var parts = (str + '').split('.'),
-//         main = parts[0],
-//         len = main.length,
-//         output = '',
-//         i = len - 1;
-
-//     while(i >= 0) {
-//         output = main.charAt(i) + output;
-//         if ((len - i) % 3 === 0 && i > 0) {
-//             output = ' ' + output;
-//         }
-//         --i;
-//     }
-
-//     if (parts.length > 1) {
-//         output += '.' + parts[1];
-//     }
-//     return output;
-// };
-
-
-// Хак для яндекс карт втавленных через iframe
-// Страуктура:
-//<div class="map__wrap" id="map-wrap">
-//  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
-//</div>
-// Обязательное свойство в style которое и переключет скрипт
-// document.addEventListener('click', function(e) {
-//     var map = document.querySelector('#map-wrap iframe')
-//     if(e.target.id === 'map-wrap') {
-//         map.style.pointerEvents = 'all'
-//     } else {
-//         map.style.pointerEvents = 'none'
-//     }
-// })
-
-// Простая проверка форм на заполненность и отправка аяксом
-// function formSubmit() {
-//     $("[type=submit]").on('click', function (e){
-//         e.preventDefault();
-//         var form = $(this).closest('.form');
-//         var url = form.attr('action');
-//         var form_data = form.serialize();
-//         var field = form.find('[required]');
-//         // console.log(form_data);
-
-//         empty = 0;
-
-//         field.each(function() {
-//             if ($(this).val() == "") {
-//                 $(this).addClass('invalid');
-//                 // return false;
-//                 empty++;
-//             } else {
-//                 $(this).removeClass('invalid');
-//                 $(this).addClass('valid');
-//             }
-//         });
-
-//         // console.log(empty);
-
-//         if (empty > 0) {
-//             return false;
-//         } else {
-//             $.ajax({
-//                 url: url,
-//                 type: "POST",
-//                 dataType: "html",
-//                 data: form_data,
-//                 success: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('success');
-//                     console.log(response);
-//                     // console.log(data);
-//                     // document.location.href = "success.html";
-//                 },
-//                 error: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('error');
-//                     console.log(response);
-//                 }
-//             });
-//         }
-
-//     });
-
-//     $('[required]').on('blur', function() {
-//         if ($(this).val() != '') {
-//             $(this).removeClass('invalid');
-//         }
-//     });
-
-//     $('.form__privacy input').on('change', function(event) {
-//         event.preventDefault();
-//         var btn = $(this).closest('.form').find('.btn');
-//         if ($(this).prop('checked')) {
-//             btn.removeAttr('disabled');
-//             // console.log('checked');
-//         } else {
-//             btn.attr('disabled', true);
-//         }
-//     });
-// }
-
-
-// Проверка на возможность ввода только русских букв, цифр, тире и пробелов
-// $('#u_l_name').on('keypress keyup', function () {
-//     var that = this;
-//
-//     setTimeout(function () {
-//         if (that.value.match(/[ -]/) && that.value.length == 1) {
-//             that.value = '';
-//         }
-//
-//         if (that.value.match(/-+/g)) {
-//             that.value = that.value.replace(/-+/g, '-');
-//         }
-//
-//         if (that.value.match(/ +/g)) {
-//             that.value = that.value.replace(/ +/g, ' ');
-//         }
-//
-//         var res = /[^а-яА-Я -]/g.exec(that.value);
-//
-//         if (res) {
-//             removeErrorMsg('#u_l_name');
-//             $('#u_l_name').after('<div class="j-required-error b-check__errors">Измените язык ввода на русский</div>');
-//         }
-//         else {
-//             removeErrorMsg('#u_l_name');
-//         }
-//
-//         that.value = that.value.replace(res, '');
-//     }, 0);
-// });
-
-// Добавление класса при прокрутке
-// function onVisible(selector, callback, repeat = false) {
-//
-//     let options = {threshold: [0.5] };
-//     let observer = new IntersectionObserver(onEntry, options);
-//     let elements = document.querySelectorAll(selector);
-//
-//     for (let elm of elements) {
-//         observer.observe(elm);
-//     }
-//
-//     function onEntry(entry) {
-//         entry.forEach(change => {
-//             let elem = change.target;
-//             // console.log(change);
-//             // console.log(elem.innerHTML);
-//             if (change.isIntersecting) {
-//                 if (!elem.classList.contains('show') || repeat) {
-//                     elem.classList.add('show');
-//                     callback(elem);
-//                 }
-//             }
-//         });
-//     }
-//
-// }
-//
-// onVisible('.programsInfo__number',  function(e) {
-//     animateNumber(e, e.innerHTML);
-// }, true);
-//
-// // Анимация чисел
-// function animateNumber(elem, final, duration = 1000) {
-//     let start = 0;
-//     // console.log('init');
-//     setInterval(function () {
-//         if (final > start) {
-//             elem.innerHTML = start++;
-//         }
-//     }, duration / final);
-// }
+function toggleSubMenu() {
+    $('.submenu__curent').on('click', function() {
+        $(this).closest('.submenu').toggleClass('open');
+    });
+}
+toggleSubMenu();

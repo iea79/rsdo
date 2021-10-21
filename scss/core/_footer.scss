@@ -2,13 +2,59 @@
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 2em 1.875em;
+	// background-color: $color_withe;
+	border-top: 0.0625em solid #F7F7F7;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 300;
 
-	&__content {
-		@extend .container_center;
+	&__left {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+		max-width: 61.9em;
+		font-size: 0.75em;
 	}
+
+	&__logo {
+		color: #5B6271;
+		font-size: 1.15em;
+		font-weight: 500;
+		margin-right: 1em;
+	}
+
+	&__copy {
+		margin-right: 1em;
+		color: #5B6271;
+	}
+
+	&__tel {
+		margin-right: 1em;
+		color: #5B6271;
+		text-decoration: none;
+	}
+
+	&__email {
+		color: #1E59E1;
+	}
+
+	&__soc {
+		display: flex;
+		align-items: center;
+
+		a {
+			text-decoration: none;
+			color: #C9C9C9;
+			font-size: 1.3em;
+			margin-left: 0.6em;
+
+			&:hover {
+				color: #999;
+			}
+		}
+	}
+
 }
