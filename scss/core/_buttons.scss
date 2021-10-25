@@ -1,49 +1,98 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	color: $btn_default_text_color;
+	color: $color_withe;
 	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 5px 15px 7px;
-	border: none;
+	font-weight: bold;
+	font-size: 0.875em;
+	line-height: 126.5%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	padding: 1.11em 1.7em;
+	border: 1px solid $color_primary;
 	outline: none;
 	text-decoration: none;
 	display: inline-block;
-	background-color: $btn_default_bg_color;
+	background: $color_primary;
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 0;
 	transition: 0.3s;
 	transition-property: background color border-color;
 
-	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+	&:hover:not(:disabled) {
+		background-color: #3E73EF;
+		border: 1px solid #3E73EF;
+		color: $color_withe;
 	}
 
-	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+	&:active:not(:disabled) {
+		background-color: #154DCC;
+		border: 1px solid #154DCC;
+		color: $color_withe;
 	}
-	@each $status_el, $color_bg in $el_colors {
-		&_#{$status_el} {
-			background-color: $color_bg;
-			border-color: $color_bg;
-			color: $btn_contrast_text_color;
 
-			&:hover {
-				background-color: darken($color_bg, 7%);
-				color: $btn_contrast_text_color;
-			}
+	&:focus:not(:disabled) {
+		background-color: #154DCC;
+		border: 1px solid #154DCC;
+		color: $color_withe;
+	}
 
-			&:active,
-			&:focus {
-				background-color: darken($color_bg, 10%);
-				color: $btn_contrast_text_color;
-			}
+	&_border {
+		background: $color_withe;
+		color: $main_color;
+
+		&:hover:not(:disabled) {
+			background-color: #1E59E1;
+			border: 1px solid #1E59E1;
+			color: $color_withe;
 		}
+
+		&:active:not(:disabled) {
+			background-color: $color_withe;
+			border: 1px solid #1E59E1;
+			color: $main_color;
+		}
+
+		&:focus:not(:disabled) {
+			background-color: $color_withe;
+			border: 1px solid #1E59E1;
+			color: $main_color;
+		}
+	}
+
+	&_thin {
+		border: 1px solid #AAAAAA;
+		background: $color_withe;
+		color: $main_color;
+		font-weight: 400;
+		padding: 1.11em 0.79em;
+
+		&:hover:not(:disabled) {
+			background-color: #1E59E1;
+			border: 1px solid #1E59E1;
+			color: $color_withe;
+		}
+
+		&:active:not(:disabled) {
+			border: 1px solid #AAAAAA;
+			background: $color_withe;
+			color: $main_color;
+		}
+
+		&:focus:not(:disabled) {
+			border: 1px solid #AAAAAA;
+			background: $color_withe;
+			color: $main_color;
+		}
+	}
+
+	&:disabled {
+		opacity: 0.23;
+	}
+
+	&_fullwidth {
+		width: 100%;
 	}
 }

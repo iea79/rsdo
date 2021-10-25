@@ -1,0 +1,78 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Главная";
+
+block content
+    .page__content
+        .page__body
+            .page__title Расписание курсов
+            .collapseAll
+                .collapseAll__item(data-collapse="all") Свернуть все
+                .collapseAll__item(data-collapse="20.05.2021") Задания на сегодня
+            // begin collapseList
+            .collapseList
+                each item in [{day: 'Понедельник', date: '18.05.2021'}, {day: 'Вторник', date: '19.05.2021', bage: "2"}, {day: 'Среда', date: '20.05.2021', today: true}, {day: 'Четверг', date: '21.05.2021', bage: "1"}, {day: 'Пятница', date: '22.05.2021'}, {day: 'Суббота', date: '23.05.2021'}, {day: 'Воскресенье', date: '24.05.2021'}]
+                    - bage = '';
+                    if item.day === 'Вторник'
+                        - bage = 'collapseList__bage';
+                    .collapseList__item(data-collapse-wrapper="")
+                        .collapseList__head(data-collapse=item.date)
+                            .collapseList__title
+                                .collapseList__label=item.day
+                                    if item.bage
+                                        span.collapseList__bage=item.bage
+                                .collapseList__date=item.date
+                                    if item.today
+                                        span.collapseList__today Сегодня
+                        .collapseList__body(data-collapse-body=item.date)
+                            // begin subjectList
+                            .subjectList
+                                each subject in ['Математика', 'Физика', 'Химия', 'История',]
+                                    .subjectList__item(data-collapse-wrapper="")
+                                        .subjectList__head(data-collapse=subject)=subject
+                                        .subjectList__body(data-collapse-body=subject)
+                                            table.subjectList__table
+                                                thead
+                                                    tr
+                                                        th Тема
+                                                        th Время проведения
+                                                        th ФИО преподавателя
+                                                tbody
+                                                    each tr in ['', '', '', '']
+                                                        tr
+                                                            td.thin
+                                                                a(href="") Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.
+                                                            td 16:43
+                                                            td
+                                                                a(href="") Мукоид А. Ю.
+                            // end subjectList
+
+            // end collapseList
+
+            .page__title Пропущенные задания
+
+            // begin skipedList
+            .skipedList
+                each item in [{title: 'Химия', sub: 'Лабораторная работа'},{title: 'Математика', sub: 'Сложение дробей'},{title: 'Алгебра', sub: 'Сложение дробей'}]
+                    .skipedList__item
+                        .skipedList__title=item.title
+                        .skipedList__sub=item.sub
+                        .skipedList__link
+                            a(href="") Перейти к заданию
+
+            .skipedList__more
+                a.btn.btn_border(href="#") Все задания
+
+            // end skipedList
+
+        .page__aside
+            .asideRight
+                .asideRight__title Справочная информация
+                .asideRight__body
+                    ul.asideRight__list
+                        each item in ['Как пользоваться порталом?', 'Как выставлять оценки?', 'Где показывается рейтинг учеников?', 'Как открыть календарь?', 'Как поставить предмет в календарь?', 'Как узнать контакты родителей <br>учеников?', 'Как сменить пароль?']
+                            li
+                                a(href="")!=item
+                    .asideRight__footer
+                        a.btn.btn_border.btn_fullwidth(href="") Задать свой вопрос
