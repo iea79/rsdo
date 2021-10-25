@@ -30,6 +30,8 @@
         font-size: 1.5em;
         font-weight: 400;
         margin: 0 0 0.65em;
+        display: flex;
+        align-items: center;
     }
 
     &__content {
@@ -43,6 +45,16 @@
     }
 
     &__aside {}
+
+    &__bage {
+        font-weight: normal;
+        font-size: 0.67em;
+        color: #888888;
+        padding: 0.75em 0.9375em;
+        background: #F3F3F3;
+        margin-left: 1.25em;
+        line-height: 1;
+    }
 }
 
 .aside {
@@ -630,5 +642,40 @@
         }
 
     }
+
+}
+
+.startTask {
+    &__head {
+        font-size: 1.125em;
+        line-height: 1.625em;
+        color: #5B6271;
+        margin-bottom: 1.81em;
+    }
+
+    &__props {
+        background: $color_withe;
+        padding: 1.04em 1.875em;
+        margin-bottom: 2.71em;
+        max-width: 34.89em;
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 0.4375em;
+    }
+
+    &__label {
+        font-size: 1.125em;
+        color: #5B6271;
+        width: 12.6em;
+    }
+
+    &__prop {
+        font-weight: 600;
+        font-size: 1.125em;
+    }
+
+    &__action {}
 
 }
