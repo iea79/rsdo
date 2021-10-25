@@ -1,0 +1,44 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Мои курсы: математика";
+
+block content
+    +breadcrumb(['Главная', 'Математика'])
+    .page__content
+        .page__body
+            .page__title Математика
+
+            .author
+                .author__photo
+                    img(src="img/teacher.png", alt="")
+                .author__content
+                    .author__bage Автор курса
+                    .author__name Федорищев Иван Петрович
+                    .author__prof учитель СОШ №34
+
+            // begin collapseList
+            .collapseList
+                each item in [{day: 'Дроби', date: '18.05.2021 8:30-9:16'}, {day: 'Сложение дробей', date: '18.05.2021 8:30-9:15'}, {day: 'Вычитание дробей', date: '19.05.2021 8:30-9:14'}, {day: 'Умножение дробей', date: '20.05.2021 8:30-9:18'}]
+                    - bage = '';
+                    if item.day === 'Вторник'
+                        - bage = 'collapseList__bage';
+                    .collapseList__item(data-collapse-wrapper="")
+                        .collapseList__head(data-collapse=item.date)
+                            .collapseList__title
+                                .collapseList__label.collapseList__label_short=item.day
+                                .collapseList__date=item.date
+                        .collapseList__body(data-collapse-body=item.date)
+                            // begin exercise
+                            .exercise
+                                each exercise in [{name: 'Задание', text: 'Здесь небольшое краткое текстовое описание задания, которое может быть абсолютно разной длинны. Основное описание будет на внутренней странице', link: 'Перейти к заданию'}, {name: 'Тест', text: 'Пройдите тестирование и узнайте результат. Есть 3 попытки.', link: 'Перейти к тесту'}, {name: 'Файлы занятия', text: 'Необходимые документы для занятий. Файлы в формате doc, pdf, excel, ppt.', link: 'Просмотреть файлы'}]
+                                    .exercise__item
+                                        .exercise__title=exercise.name
+                                        .exercise__text=exercise.text
+                                        .exercise__link
+                                            a(href="")=exercise.link
+                                                | 
+                                                i.icon_caret_right
+                            // end exercise
+
+            // end collapseList
