@@ -44,6 +44,12 @@
         flex-grow: 1;
     }
 
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__aside {}
 
     &__bage {
@@ -737,4 +743,20 @@
         }
     }
 
+}
+
+.dateSwicher {
+    display: flex;
+    align-items: center;
+    color: #8E939E;
+
+    a {
+        color: #8E939E;
+        text-decoration: none;
+        font-size: 0.6875em;
+    }
+
+    &__date {
+        margin: 0 1.5625em;
+    }
 }
