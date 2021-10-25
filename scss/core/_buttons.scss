@@ -64,8 +64,8 @@
 
 	&_thin {
 		border: 1px solid #AAAAAA;
-		background: $color_withe;
-		color: $main_color;
+		background: transparent;
+		color: #737373;
 		font-weight: 400;
 		padding: 1.11em 0.79em;
 
@@ -77,14 +77,41 @@
 
 		&:active:not(:disabled) {
 			border: 1px solid #AAAAAA;
-			background: $color_withe;
-			color: $main_color;
+			background: transparent;
+			color: #737373;
 		}
 
 		&:focus:not(:disabled) {
 			border: 1px solid #AAAAAA;
-			background: $color_withe;
-			color: $main_color;
+			background: transparent;
+			color: #737373;
+		}
+	}
+
+	&_link {
+		padding-left: 0;
+		padding-right: 0;
+		color: #737373;
+		font-weight: 400;
+		border-color: transparent;
+		background: transparent;
+
+		&:hover:not(:disabled) {
+			border-color: transparent;
+			background: transparent;
+			color: $color_primary;
+		}
+
+		&:active:not(:disabled) {
+			border-color: transparent;
+			background: transparent;
+			color: #737373;
+		}
+
+		&:focus:not(:disabled) {
+			border-color: transparent;
+			background: transparent;
+			color: #737373;
 		}
 	}
 
