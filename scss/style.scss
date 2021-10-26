@@ -53,7 +53,9 @@
         }
 
         &:first-child {
-            width: 1.4em;
+            flex: none;
+            overflow: hidden;
+            // width: 2.3em;
             padding-right: 0;
         }
     }
@@ -75,10 +77,10 @@
 
             &__col {
                 font-size: 0.875em;
-                padding: 0.85em 1.45em;
+                padding: 0.85em 1.25em;
 
                 &:first-child {
-                    width: 1.8em;
+                    // width: 1.8em;
                     padding-right: 0;
                 }
             }
