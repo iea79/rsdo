@@ -1,0 +1,66 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Мои курсы: математика";
+
+block content
+    +breadcrumb(['Главная', 'Русский язык'])
+    .page__content
+        .page__body
+            .page__title Список курсов
+            .studentLk__action
+                ul.courseList
+                    li.courseList__item
+                        a.courseList__link.courseList__link_active Все
+                    li.courseList__item
+                        a.courseList__link Текущие
+                    li.courseList__item
+                        a.courseList__link Предстоящие
+                    li.courseList__item
+                        a.courseList__link Прошедшие
+                    li.courseList__item
+                        a.courseList__link Избранные
+
+                .courseSort
+                    .courseSort__label Сортировка
+                    .courseSort__sub
+                        .childList.childList_sort.js-drop
+                            .childList__current.childList__current_sort
+                                .childList__item.childList__item_sort
+                                    i.icon_sort
+                                    | по имени курса
+                            .childList__drop.childList__drop_sort.js-drop-list
+                                a.childList__item.childList__item_sort.selected(href="")
+                                    i.icon_sort
+                                    | по имени курса
+                                a.childList__item.childList__item_sort(href="")
+                                    i.icon_sort_up
+                                    | по имени группы
+                                a.childList__item.childList__item_sort(href="")
+                                    i.icon_sort
+                                    | по имени курса
+                                a.childList__item.childList__item_sort(href="")
+                                    i.icon_sort_up
+                                    | по имени группы
+
+            .studentLk__courses
+                // begin courses
+                .courses
+                    each courses in [{img: '1', name: 'Математика'}, {img: '2', name: 'Литература'}, {img: '3', name: 'История'}, {img: '3', name: 'История'}, {img: '4', name: 'Химия'}, {img: '5', name: 'Физика'}, {img: '6', name: 'Русский язык'}, {img: '6', name: 'Русский язык'},]
+                        .courses__item
+                            .courses__head
+                                i.icon_clock
+                                span.courses__date Последнее занятие: 30 марта 2021 16:40
+                            .courses__body
+                                .courses__left
+                                    .courses__subject=courses.name
+                                    .courses__img
+                                        img(src="./img/courses_"+courses.img+".svg")
+                                .courses__right
+                                    .courses__label Преподаватель: 
+                                    .courses__lecturer Рубенштейн А.В.
+
+                            a.courses__link(href="") Подробнее
+                            .courses__number 7A
+
+                // end courses

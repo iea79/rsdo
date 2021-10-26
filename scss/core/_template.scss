@@ -19,6 +19,35 @@ body {
 
 }
 
+a {
+	color: $color_primary;
+
+	&:hover {
+		text-decoration-color: transparent;
+		color: #204DB4;
+	}
+
+	&:active {
+		color: #487CF5;
+	}
+}
+
+.muted {
+	color: #5B6271;
+}
+
+.danger {
+	color: #0CBF29;
+}
+
+.thin {
+	font-weight: 300;
+}
+
+.bold {
+	font-weight: 600;
+}
+
 /* Middle
  ----------------------------------------------------------------------------- */
 .main {
@@ -31,7 +60,7 @@ body {
 
 	&__content {
 		flex-grow: 1;
-		padding: 1.7em 1.875em;
+		padding: 1.5em 1.875em;
 	}
 }
 

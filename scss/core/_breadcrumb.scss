@@ -1,7 +1,7 @@
 // Breadcrumb ==================================================================
 
 .breadcrumb {
-	margin: 1.1em 0;
+	margin: 0 0 1.5625em;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
@@ -14,9 +14,11 @@
 
 		&:not(:first-child) {
 			&:before {
-				content: '/';
+				content: '•';
+				font-size: 1.3em;
 				display: inline-block;
-				margin: 0 1.2em;
+				line-height: 1;
+				margin: 0 0.2em;
 				color: rgba(29, 29, 27, 0.5);
 			}
 		}
@@ -25,14 +27,16 @@
 			a {
 				cursor: default;
 				text-decoration: none;
-				color: $main_color;
-				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 
 		a {
-			font-size: $main_font_size;
-			color: rgba(29, 29, 27, 0.5);
+			color: #929498;
+			font-size: 0.8125em;
 			text-decoration: none;
 
 			&:hover {

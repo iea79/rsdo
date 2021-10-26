@@ -1,0 +1,35 @@
+.asideRight {
+    &__title {
+        font-size: 1.5em;
+        line-height: 1.45;
+        margin-bottom: 0.4em;
+    }
+
+    &__body {
+        background: $color_withe;
+        padding: 1.5em 1.25em 2.25em;
+        width: 23.5em;
+        border: 0.0625em solid #F7F7F7;
+        box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1.27;
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        a {
+            font-size: 1.125em;
+        }
+    }
+
+    &__footer {
+        margin-top: 2.25em;
+    }
+
+}

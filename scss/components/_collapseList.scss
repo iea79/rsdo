@@ -1,0 +1,124 @@
+.collapseList {
+    &__item {
+        background: #FFFFFF;
+        box-shadow: 0 0 0.4375em rgba(186, 186, 186, 0.1);
+        margin-bottom: 1.5em;
+
+        &.open {
+            box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
+
+            .collapseList {
+                &__head {
+                    background: $color_primary;
+                    color: $color_withe;
+
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+
+                    &:hover {
+                        .collapseList {
+                            &__label {
+                                color: $color_withe;
+                            }
+
+                            &__date {
+                                color: $color_withe;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5625em 1.25em;
+        cursor: pointer;
+
+        &:after {
+            font-family: 'rsdo';
+            content: $icon_caret_down;
+            font-size: 0.49em;
+            line-height: 1;
+        }
+
+        &:hover {
+            .collapseList {
+                &__label {
+                    color: $color_primary;
+                }
+
+                &__date {
+                    color: $color_primary;
+                }
+            }
+        }
+
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        flex: none;
+        width: 16.7em;
+        padding-right: 0.85em;
+        font-size: 1.25em;
+        line-height: 1.45;
+        display: flex;
+        align-items: center;
+
+        &_short {
+            width: auto;
+        }
+    }
+
+    &__date {
+        color: #5B6271;
+        display: flex;
+        align-items: center;
+
+        .open & {
+            color: $color_withe;
+        }
+    }
+
+    &__body {
+        padding: 1.25em;
+        display: none;
+    }
+
+    &__bage {
+        min-width: 1.92em;
+        padding: 0.1em;
+        height: 1.92em;
+        background: #FF004C;
+        color: $color_withe;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6em;
+        font-weight: 600;
+        line-height: 1;
+        border-radius: 50%;
+        margin-left: 1.09em;
+        flex: none;
+    }
+
+    &__today {
+        background: #E4DDDD;
+        border-radius: 0.25em;
+        color: #5B6271;
+        font-size: 0.8125em;
+        line-height: 1.45;
+        padding: 0.125em 0.4375em;
+        margin-left: 0.6875em;
+    }
+
+}

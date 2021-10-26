@@ -1,0 +1,58 @@
+.taskBox {
+    box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
+    padding: 1.875em;
+    background: $color_withe;
+
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+
+    &__steps {
+        background: #F3F3F3;
+        margin-right: 1.39em;
+        padding: 0.44em 1.04em;
+        font-size: 0.875em;
+        color: #888;
+
+        b {
+            font-weight: 600;
+        }
+    }
+
+    &__balls {
+        color: #5B6271;
+    }
+
+    &__body {
+        padding: 1.3em 0;
+    }
+
+    &__question {
+        font-size: 1.5em;
+    }
+
+    &__resp {
+        margin: 1.75em 0 2em;
+
+        .form__check {
+            margin-bottom: 1.2em;
+        }
+    }
+
+    &__footer {
+        background: #F7F7F7;
+        margin: 0 -1.875em -1.875em;
+        padding: 2.125em 1.875em;
+
+        .btn {
+            margin-right: 2em;
+
+            &_thin {
+                width: 100%;
+                max-width: 15.7em;
+            }
+        }
+    }
+
+}

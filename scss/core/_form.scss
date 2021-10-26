@@ -24,6 +24,15 @@
 	}
 
 	&__label {}
+
+	&__check {
+		display: flex;
+		align-items: center;
+
+		input {
+			margin-right: 0.5em;
+		}
+	}
 }
 // Input text and textarea ================================================
 input:not([type]),
@@ -91,9 +100,10 @@ input[type=radio] {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 1em;
 	flex: none;
-	height: 14px;
-	width: 14px;
+	height: 1.25em;
+	width: 1.25em;
 	color: #aaa;
 	background: 0 0;
 	border: 1px solid;
@@ -122,14 +132,23 @@ input[type=radio] {
 
 input[type=radio] {
 	border-radius: 50%;
+	background: #F3F3F3;
+	border: 1px solid #E3E3E3;
 
-	&:checked:before {
-		content: '';
-		width: 6px;
-		height: 6px;
-		display: block;
-		border-radius: 50%;
-		background: #000;
+	&:checked {
+		background: #1E59E1;
+		border-color: #1E59E1;
+
+		&:before {
+			content: '';
+			position: absolute;
+			flex: none;
+			width: 30%;
+			height: 30%;
+			display: block;
+			border-radius: 50%;
+			background: $color_withe;
+		}
 	}
 
 	&:disabled:checked:before {
@@ -141,6 +160,7 @@ input[type=checkbox] {
 	&:checked:before,
 	&:indeterminate:before {
 		content: "";
+		position: absolute;
 		width: 40%;
 		height: 60%;
 		color: #000;

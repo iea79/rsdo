@@ -1,0 +1,24 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Математика: вводное тестирование";
+
+block content
+    +breadcrumb(['Главная', 'Математика', 'Тестирование'])
+    .page__content
+        .page__body
+            .page__title Математика
+                .page__bage Вводное тестирование
+
+            .startTask
+                .startTask__head Тестирование (проверка теоретических знаний). Предлагается 20 вопросов с разными вариантами ответов. Необходимо выбрать или дополнить правильные ответы
+                .startTask__props
+                    .startTask__row
+                        .startTask__label Время на выполнение
+                        .startTask__prop 5 минут
+                    .startTask__row
+                        .startTask__label Количество попыток
+                        .startTask__prop 3
+
+                .startTask__action
+                    a.btn(href="#") Начать тестирование

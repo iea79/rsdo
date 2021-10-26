@@ -1,0 +1,30 @@
+.collapseAll {
+    display: flex;
+    margin-bottom: 1.66em;
+
+    &__item {
+        color: #1E59E1;
+        line-height: 1.24;
+        margin-right: 0.9em;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: 0.0625em dashed;
+            transition: border 0.3s;
+        }
+
+        &:hover {
+            &:after {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &:nth-child(n+2) {
+            border-left: 0.0625em solid #C9C9C9;
+            padding-left: 0.9375em;
+        }
+    }
+
+}

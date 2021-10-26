@@ -1,0 +1,35 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Математика: вводное тестирование";
+
+block content
+    +breadcrumb(['Главная', 'Математика', 'Тестирование', 'Вводное тестирование'])
+    .page__content
+        .page__body
+            .taskBox
+                .taskBox__head
+                    .taskBox__steps
+                        b Вопрос 2 
+                        | из 20
+                    .taskBox__balls Баллов за вопрос: 1
+                .taskBox__body
+                    .taskBox__question 2. В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?
+                    .taskBox__resp
+                        label.form__check
+                            input(type="radio", name="quest-1")
+                            span Один
+                        label.form__check
+                            input(type="radio", name="quest-1")
+                            span Четыре
+                        label.form__check
+                            input(type="radio", name="quest-1")
+                            span Семь
+                        label.form__check
+                            input(type="radio", name="quest-1")
+                            span Восемь
+
+                .taskBox__footer
+                    a.btn.btn_link(href="") Предыдущий вопрос
+                    a.btn(href="") Следующий вопрос
+                    a.btn.btn_thin(href="") Закончить тест

@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>РСДО</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.2"/>
+  </head>
+  <body>
+    <aside class="aside">
+      <div class="aside__head"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+      <nav class="aside__nav">
+        <ul class="navbar">
+          <li class="navbar__item"><a class="navbar__link active" href="home.html"><i class="icon_dashboard"> </i><span>Главная</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_home"> </i><span>Домашняя</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_calendar"> </i><span>Календарь/расписание</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_speech"> </i><span>Успеваемость</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_social_media"> </i><span>Класс/учебная группа</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_pie_chart"> </i><span>Аналитика и отчеты</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_filter"> </i><span>Управление ОО</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_sliders"> </i><span>Администрирование</span></a></li>
+        </ul>
+        <ul class="submenu">
+          <li class="submenu__item">
+            <div class="submenu__curent"> <i class="icon_book"> </i>Предметы</div>
+            <div class="submenu__drop">
+              <ul>
+                <li><a class="active" href="">Все курсы</a></li>
+                <li><a href="">Математика</a></li>
+                <li><a href="">Физика</a></li>
+                <li><a href="">Технология</a></li>
+                <li><a href="">Математика</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <div class="header__left">
+          <div class="header__title">Главная</div>
+          <div class="header__sub">
+            <div class="childList js-drop">
+              <div class="childList__current">
+                <div class="childList__item"><i class="icon_kid"></i>Милонов А. А.</div>
+              </div>
+              <div class="childList__drop js-drop-list"><a class="childList__item selected" href=""><i class="icon_kid"></i>Милонов А. А.</a><a class="childList__item" href=""><i class="icon_kid"></i>Милонов Б.А.</a><a class="childList__item" href=""><i class="icon_kid"></i>Милонова В.А.</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__notice"><a class="icon_search" href=""></a><a class="icon_chat" href=""></a><a class="icon_bell" href=""></a></div>
+          <div class="header__user js-drop">
+            <div class="header__userPhoto"><img src="img/ava.png" alt=""/></div>
+            <div class="header__userDescr">
+              <div class="header__userName">Светлана Абрамчук</div>
+              <div class="header__userInfo">Родитель (детей 3)</div>
+            </div>
+            <div class="header__userDrop js-drop-list"><a class="header__userLink" href=""><i class="icon_exit"> </i><span>Выход из аккаунта</span></a></div>
+          </div>
+        </div>
+      </header>
+      <div class="main__content">
+        <div class="page__content">
+          <div class="page__body">
+            <div class="page__head">
+              <div class="page__title">Расписание курсов</div>
+              <div class="dateSwicher"><a class="icon_caret_left" href=""></a>
+                <div class="dateSwicher__date">18 мая - 24 мая </div><a class="icon_caret_right" href=""></a>
+              </div>
+            </div>
+            <div class="collapseAll">
+              <div class="collapseAll__item" data-collapse="all">Свернуть все</div>
+              <div class="collapseAll__item" data-collapse="20.05.2021">Задания на сегодня</div>
+            </div>
+            <!-- begin collapseList-->
+            <div class="collapseList">
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="18.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Понедельник
+                    </div>
+                    <div class="collapseList__date">18.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="18.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="19.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Вторник<span class="collapseList__bage">2</span>
+                    </div>
+                    <div class="collapseList__date">19.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="19.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="20.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Среда
+                    </div>
+                    <div class="collapseList__date">20.05.2021<span class="collapseList__today">Сегодня</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="20.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="21.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Четверг<span class="collapseList__bage">1</span>
+                    </div>
+                    <div class="collapseList__date">21.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="21.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="22.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Пятница
+                    </div>
+                    <div class="collapseList__date">22.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="22.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="23.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Суббота
+                    </div>
+                    <div class="collapseList__date">23.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="23.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+              <div class="collapseList__item" data-collapse-wrapper="">
+                <div class="collapseList__head" data-collapse="24.05.2021">
+                  <div class="collapseList__title">
+                    <div class="collapseList__label">Воскресенье
+                    </div>
+                    <div class="collapseList__date">24.05.2021
+                    </div>
+                  </div>
+                </div>
+                <div class="collapseList__body" data-collapse-body="24.05.2021">
+                  <!-- begin subjectList-->
+                  <div class="subjectList">
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Математика">Математика</div>
+                      <div class="subjectList__body" data-collapse-body="Математика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Физика">Физика</div>
+                      <div class="subjectList__body" data-collapse-body="Физика">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="Химия">Химия</div>
+                      <div class="subjectList__body" data-collapse-body="Химия">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="subjectList__item" data-collapse-wrapper="">
+                      <div class="subjectList__head" data-collapse="История">История</div>
+                      <div class="subjectList__body" data-collapse-body="История">
+                        <table class="subjectList__table">
+                          <thead>
+                            <tr>
+                              <th>Тема</th>
+                              <th>Время проведения</th>
+                              <th>ФИО преподавателя</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                            <tr>
+                              <td class="thin"><a href="">Сложение сложных  дробей. Периодические функции. Интегралы. Эксцентриситет.</a></td>
+                              <td>16:43</td>
+                              <td><a href="">Мукоид А. Ю.</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end subjectList-->
+                </div>
+              </div>
+            </div>
+            <!-- end collapseList-->
+            <div class="page__title">Пропущенные задания</div>
+            <!-- begin skipedList-->
+            <div class="skipedList">
+              <div class="skipedList__item">
+                <div class="skipedList__title">Химия</div>
+                <div class="skipedList__sub">Лабораторная работа</div>
+                <div class="skipedList__link"><a href="">Перейти к заданию</a></div>
+              </div>
+              <div class="skipedList__item">
+                <div class="skipedList__title">Математика</div>
+                <div class="skipedList__sub">Сложение дробей</div>
+                <div class="skipedList__link"><a href="">Перейти к заданию</a></div>
+              </div>
+              <div class="skipedList__item">
+                <div class="skipedList__title">Алгебра</div>
+                <div class="skipedList__sub">Сложение дробей</div>
+                <div class="skipedList__link"><a href="">Перейти к заданию</a></div>
+              </div>
+            </div>
+            <div class="skipedList__more"><a class="btn btn_border" href="#">Все задания</a></div>
+            <!-- end skipedList-->
+          </div>
+          <div class="page__aside">
+            <div class="asideRight">
+              <div class="asideRight__title">Справочная информация</div>
+              <div class="asideRight__body">
+                <ul class="asideRight__list">
+                  <li><a href="">Как пользоваться порталом?</a></li>
+                  <li><a href="">Как выставлять оценки?</a></li>
+                  <li><a href="">Где показывается рейтинг учеников?</a></li>
+                  <li><a href="">Как открыть календарь?</a></li>
+                  <li><a href="">Как поставить предмет в календарь?</a></li>
+                  <li><a href="">Как узнать контакты родителей <br>учеников?</a></li>
+                  <li><a href="">Как сменить пароль?</a></li>
+                </ul>
+                <div class="asideRight__footer"><a class="btn btn_border btn_fullwidth" href="">Задать свой вопрос</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__left">
+          <div class="footer__logo">ООО ЦДО</div>
+          <div class="footer__copy">РСДО All rights reserved 2021</div><a class="footer__tel" href="tel: 8 800 100 34 06">8 800 100 34 06</a><a class="footer__email" href="mailto: info@cdo-global.ru">info@cdo-global.ru</a>
+        </div>
+        <div class="footer__soc"><a class="icon_facebook" href="" target="_blank"></a><a class="icon_vk" href="" target="_blank"></a><a class="icon_twitter" href="" target="_blank"></a><a class="icon_insta" href="" target="_blank"></a></div>
+      </footer>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/function.js?0.2"></script>
+  </body>
+</html>

@@ -118,3 +118,24 @@ function toggleSubMenu() {
     });
 }
 toggleSubMenu();
+
+function collapsed() {
+    let toggle = $('[data-collapse]');
+
+    toggle.on('click', function() {
+        let id = $(this).data('collapse'),
+            body = $('[data-collapse-body="'+id+'"]'),
+            wrap = body.closest('[data-collapse-wrapper]');
+
+        if (id === 'all') {
+            $('[data-collapse-wrapper]').removeClass('open');
+            $('[data-collapse-body]').slideUp();
+        } else {
+            wrap.toggleClass('open');
+            body.slideToggle();
+        }
+
+
+    });
+}
+collapsed();
