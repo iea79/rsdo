@@ -1,0 +1,29 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Математика: вводное тестирование";
+
+block content
+    +breadcrumb(['Главная', 'Математика', 'Тестирование', 'Вводное тестирование', 'Данные ответов'])
+    .page__content
+        .page__body
+            .page__title Данные ответов
+
+            .rezultTable
+                .rezultTable__head
+                    .rezultTable__row
+                        .rezultTable__col №
+                        .rezultTable__col Вопрос
+                        .rezultTable__col Ваш ответ
+
+                .rezultTable__body
+                    each item, i in [{name: 'Назовите производную из числа 8?', number: '2'}, {name: 'В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?', number: '7'}, {name: 'Сколько граней у трехгранной пирамиды?', number: '12'}, {name: 'У Армана 2 яблока, у Пети 4. Сколько у них яблок на двоих?', number: '2'}, {name: 'В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?', number: '7'}, {name: 'Сколько граней у трехгранной пирамиды?', number: '6'}, {name: 'Назовите производную из числа 8?', number: '11'}, {name: 'Чему равно уравнение sin*cos=?', number: '7'}, {name: 'Найдите производную числа 11246', number: '123'}, {name: 'В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?', number: '7'}, ]
+
+                        .rezultTable__row
+                            .rezultTable__col.muted=i+1
+                            .rezultTable__col.muted=item.name
+                            .rezultTable__col.bold=item.number
+
+            .page__footer
+                a.btn.btn_thin(href="#") Вернуться к попытке
+                button.btn Завершить тестирование
