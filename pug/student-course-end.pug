@@ -1,0 +1,91 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Математика: вводное тестирование";
+
+block content
+    +breadcrumb(['Главная', 'Математика', 'Тестирование', 'Вводное тестирование', 'Результаты тестирования'])
+    .page__content
+        .page__body
+            .page__title Результаты тестирования
+
+            .whiteBox
+                .rezultList
+                    .rezultList__row
+                        .rezultList__label Тест начат
+                        .rezultList__prop
+                            b Вторник, 27 июля 2021
+                    .rezultList__row
+                        .rezultList__label Состояние
+                        .rezultList__prop
+                            b Завершен
+                    .rezultList__row
+                        .rezultList__label Дата завершения
+                        .rezultList__prop
+                            b Среда, 28 июля 2021, 18:55
+                    .rezultList__row
+                        .rezultList__label Прошло времени
+                        .rezultList__prop
+                            b 17 ч. 36 м.
+                    .rezultList__row
+                        .rezultList__label Баллы
+                        .rezultList__prop
+                            b 24
+                    .rezultList__row
+                        .rezultList__label Оценка
+                        .rezultList__prop
+                            span.danger 10/10 
+                            span.muted.thin (100%)
+
+                .rezultList__back
+                    a.btn(href="#") Вернуться к курсу
+
+            .page__title Ответы
+
+            .whiteBox.taskRezult.taskRezult_error
+                .taskRezult__title 1. В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?
+                .taskRezult__list
+                    .taskRezult__row
+                        .taskRezult__icon
+                        .taskRezult__name Один
+                    .taskRezult__row.taskRezult__row_checked
+                        .taskRezult__icon
+                            i.icon_close
+                        .taskRezult__name Четыре
+                    .taskRezult__row
+                        .taskRezult__icon
+                            i.icon_check
+                        .taskRezult__name Семь
+                    .taskRezult__row
+                        .taskRezult__icon
+                        .taskRezult__name Восемь
+
+                .taskRezult__footer
+                    .taskRezult__total.taskRezult__total_error
+                        i.icon_close 
+                        span Ответ неверный. Правильный ответ 7. 
+                    .taskRezult__solution
+                        .taskRezult__solutionLabel Логика решения.
+                        .taskRezult__solutionText Нужно сложить цифры 4 и 3. Сумма этих чисел (7) является правильным ответом к задаче.
+
+            .whiteBox.taskRezult
+                .taskRezult__title 1. В вазе лежали 4 яблока и 3 груши. Сколько фруктов лежало в вазе?
+                .taskRezult__list
+                    .taskRezult__row
+                        .taskRezult__icon
+                        .taskRezult__name Один
+                    .taskRezult__row
+                        .taskRezult__icon
+                        .taskRezult__name Четыре
+                    .taskRezult__row.taskRezult__row_checked
+                        .taskRezult__icon
+                            i.icon_check
+                        .taskRezult__name Семь
+                    .taskRezult__row
+                        .taskRezult__icon
+                        .taskRezult__name Восемь
+
+                .taskRezult__footer
+                    .taskRezult__total
+                        i.icon_check 
+                        span Ваш ответ верный
