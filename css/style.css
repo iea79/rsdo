@@ -2413,6 +2413,7 @@ html[data-browser*=flexible] .grid_nowrap {
 .courses__body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .courses__left {
   display: flex;
