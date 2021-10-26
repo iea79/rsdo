@@ -154,15 +154,30 @@
 
     &_error {
         border: 1px solid #FFB1C9;
+
+        .taskRezult__bage {
+            background: #FF004C;
+        }
     }
 
     &__title {
-        font-size: 20px;
+        font-size: 1.25em;
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__bage {
+        background: #FF004C;
+        color: $color_withe;
+        font-weight: 500;
+        font-size: 0.75em;
+        padding: 0.4375em 0.9375em;
     }
 
     &__list {
-        margin: 11px 0 34px;
+        margin: 0.6875em 0 2.125em;
         line-height: 1.1;
     }
 
@@ -180,13 +195,13 @@
     }
 
     &__icon {
-        width: 15px;
-        height: 15px;
+        width: 0.9375em;
+        height: 0.9375em;
         background: #F3F3F3;
-        border: 1px solid #E3E3E3;
+        border: 0.0625em solid #E3E3E3;
         box-sizing: border-box;
-        border-radius: 15px;
-        margin-right: 8px;
+        border-radius: 0.9375em;
+        margin-right: 0.5em;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -205,8 +220,8 @@
     &__name {}
 
     &__footer {
-        border-top: 1px solid #F7F7F7;
-        padding: 21px 30px 0;
+        border-top: 0.0625em solid #F7F7F7;
+        padding: 1.3125em 1.875em 0;
         margin: 0 -1.875em;
     }
 
@@ -216,13 +231,13 @@
         align-items: center;
 
         i {
-            width: 15px;
-            height: 15px;
+            width: 0.9375em;
+            height: 0.9375em;
             background: #2BBE1E;
-            border: 1px solid #E3E3E3;
+            border: 0.0625em solid #E3E3E3;
             box-sizing: border-box;
-            border-radius: 15px;
-            margin-right: 8px;
+            border-radius: 0.9375em;
+            margin-right: 0.5em;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -244,15 +259,15 @@
     }
 
     &__solution {
-        margin-top: 8px;
+        margin-top: 0.5em;
 
         &Label {
-            font-size: 15px;
+            font-size: 0.9375em;
             font-weight: 500;
         }
 
         &Text {
-            font-size: 15px;
+            font-size: 0.9375em;
             color: #5B6271;
         }
     }
