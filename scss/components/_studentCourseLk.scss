@@ -1,0 +1,178 @@
+.studentLk {
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 1.875em;
+
+        .courseList {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+
+            &__item {
+                margin-right: 1.25em;
+
+                &:last-child {
+                    margin-right: 0;
+
+                    .courseList__link {
+                        &:before {
+                            font-family: 'rsdo';
+                            content: $icon_star;
+                            color: #EBE44B;
+                            margin-right: 0.2857em;
+                            font-size: 1.075em;
+                            vertical-align: bottom;
+
+                        }
+
+                    }
+
+                }
+            }
+
+            &__link {
+                text-decoration: none;
+                color: #5B6271;
+                background-color: #EFEFEF;
+                padding: 0.788em 1.072em;
+                font-size: 0.875em;
+                cursor: pointer;
+
+                transition: background-color 0.3s;
+
+                &_active {
+                    background-color: #E1E9FC;
+                }
+
+                &:hover {
+                    background-color: #E1E9FC;
+                }
+
+            }
+
+        }
+
+        .courseSort {
+            display: flex;
+            align-items: center;
+
+            &__label {
+                font-size: 0.8125em;
+                color: #5B6271;
+                margin-right: 0.9231em;
+            }
+
+            &__sub {}
+        }
+    }
+
+}
+
+.courses {
+    display: grid;
+    grid-gap: 1.375em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(10.313em, auto);
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background-color: $color_withe;
+        border: 0.0625em solid #F7F7F7;
+        box-shadow: 0 1.563em 2.813em -1.938em rgba(0, 0, 0, 0.1);
+        padding: 1.438em 1.25em 1.188em;
+    }
+
+    &__head {
+        font-size: 0.875em;
+        margin-right: 2em;
+
+        i {
+            color: $color_primary;
+            margin-right: 0.375em;
+        }
+    }
+
+    &__date {
+        color: #5B6271;
+        font-weight: 300;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__subject {
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #0F1627;
+        margin-right: 0.75em;
+    }
+
+    &__img {
+        width: 2.188em;
+        height: 2.188em;
+    }
+
+    &__right {
+        font-size: 0.813em;
+        line-height: 1.0763em;
+        text-align: right;
+    }
+
+    &__label {
+        color: #5B6271;
+
+    }
+
+    &__lecturer {}
+
+    &__footer {}
+
+    &__link {
+        color: $color_primary;
+        font-size: 0.875em;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            color: #3E73EF;
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.306em;
+        height: 2.768em;
+
+        background-color: $color_primary;
+        color: $color_withe;
+
+        font-size: 0.813em;
+    }
+
+}
