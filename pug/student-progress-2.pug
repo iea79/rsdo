@@ -1,0 +1,32 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Успеваемость";
+
+block content
+    +breadcrumb(['Главная', 'Успеваемость', 'Успеваемость математика_5Б_СОШ№29'])
+    .page__content
+        .page__body
+            .page__title Успеваемость математика_5Б_СОШ№29
+
+            .singleSort
+                .singleSort__label Показывать за
+                .singleSort__prop.js-drop
+                    .singleSort__current 3 последних месяца
+                    .singleSort__drop.js-drop-list
+                        a.singleSort__item(href="") 2 последних месяца
+                        a.singleSort__item(href="") 3 последних месяца
+                        a.singleSort__item(href="") 4 последних месяца
+
+            table.table
+                thead
+                    tr.normal
+                        th Задание
+                        th Дата
+                        th Оценка
+                tbody
+                    each item in [{name: 'Контрольная работа за 1 четверть', date: '12 ноября 2021', ball: '5'}, {name: 'Ответ в классе', date: '3 ноября 2021', ball: '4'}, {name: 'Срез за неделю', date: '13 октября 2021', ball: '2'}, {name: 'Ответ в классе', date: '5 сентября 2021', ball: '3'}]
+                        tr
+                            td(style="width: 75%")=item.name
+                            td.muted=item.date
+                            td.muted=item.ball
