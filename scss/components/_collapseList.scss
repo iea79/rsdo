@@ -18,7 +18,8 @@
 
                     &:hover {
                         .collapseList {
-                            &__label {
+                            &__label,
+                            &__name {
                                 color: $color_withe;
                             }
 
@@ -48,7 +49,8 @@
 
         &:hover {
             .collapseList {
-                &__label {
+                &__label,
+                &__name {
                     color: $color_primary;
                 }
 
@@ -65,7 +67,8 @@
         align-items: center;
     }
 
-    &__label {
+    &__label,
+    &__name {
         flex: none;
         width: 16.7em;
         padding-right: 0.85em;
@@ -77,6 +80,10 @@
         &_short {
             width: auto;
         }
+    }
+
+    &__name {
+        width: auto;
     }
 
     &__date {

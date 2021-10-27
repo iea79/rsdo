@@ -17,9 +17,8 @@
 		}
 
 		textarea {
-			max-width: 100%;
-			max-width: 100%;
-			min-height: 150px;
+			height: 9.125em;
+			resize: vertical;
 		}
 	}
 
@@ -49,11 +48,12 @@ textarea {
 	border: 1px solid $input_border_color;
 	font-family: $main_font_family;
 	color: $input_color;
-	padding: 6px 15px;
+	padding: 1em 1.25em;
 	outline: none;
-	font-size: 16px;
+	font-size: 1em;
+	line-height: 1.26;
 	font-weight: 400;
-	border-radius: 5px;
+	border-radius: 0;
 	transition: 0.3s;
 
 	&:hover {
