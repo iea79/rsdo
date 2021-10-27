@@ -14,10 +14,10 @@
       <div class="aside__head"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
       <nav class="aside__nav">
         <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link active" href="home.html"><i class="icon_dashboard"> </i><span>Главная</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href="home.html"><i class="icon_dashboard"> </i><span>Главная</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_home"> </i><span>Домашняя</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_calendar"> </i><span>Календарь/расписание</span></a></li>
-          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_speech"> </i><span>Успеваемость</span></a></li>
+          <li class="navbar__item"><a class="navbar__link active" href=""><i class="icon_speech"> </i><span>Успеваемость</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_social_media"> </i><span>Класс/учебная группа</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_pie_chart"> </i><span>Аналитика и отчеты</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_filter"> </i><span>Управление ОО</span></a></li>
@@ -42,7 +42,7 @@
     <main class="main">
       <header class="header">
         <div class="header__left">
-          <div class="header__title">Главная</div>
+          <div class="header__title">Успеваемость</div>
           <div class="header__sub">
             <div class="childList js-drop">
               <div class="childList__current">
@@ -65,16 +65,54 @@
         </div>
       </header>
       <div class="main__content">
-        <div class="page__title">Ученик</div>
-        <ul>
-          <li><a href="home.html">Главная</a></li>
-          <li><a href="student-course.html">Страница курса</a></li>
-          <li><a href="student-course-lk.html">Страница курса</a></li>
-          <li><a href="student-course-start.html">Страница перед началом тестирования</a></li>
-          <li><a href="student-test.html">Страница тестирования</a></li>
-          <li><a href="student-course-rezult.html">Страница результата тестирования</a></li>
-          <li><a href="student-course-end.html">Страница окончания теста</a></li>
+        <ul class="breadcrumb">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Успеваемость</a></li>
+          <li><a href="">Успеваемость математика_5Б_СОШ№29</a></li>
         </ul>
+        <div class="page__content">
+          <div class="page__body">
+            <div class="page__title">Успеваемость математика_5Б_СОШ№29</div>
+            <div class="singleSort">
+              <div class="singleSort__label">Показывать за</div>
+              <div class="singleSort__prop js-drop">
+                <div class="singleSort__current">3 последних месяца</div>
+                <div class="singleSort__drop js-drop-list"><a class="singleSort__item" href="">2 последних месяца</a><a class="singleSort__item" href="">3 последних месяца</a><a class="singleSort__item" href="">4 последних месяца</a></div>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr class="normal">
+                  <th>Задание</th>
+                  <th>Дата</th>
+                  <th>Оценка</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 75%">Контрольная работа за 1 четверть</td>
+                  <td class="muted">12 ноября 2021</td>
+                  <td class="muted">5</td>
+                </tr>
+                <tr>
+                  <td style="width: 75%">Ответ в классе</td>
+                  <td class="muted">3 ноября 2021</td>
+                  <td class="muted">4</td>
+                </tr>
+                <tr>
+                  <td style="width: 75%">Срез за неделю</td>
+                  <td class="muted">13 октября 2021</td>
+                  <td class="muted">2</td>
+                </tr>
+                <tr>
+                  <td style="width: 75%">Ответ в классе</td>
+                  <td class="muted">5 сентября 2021</td>
+                  <td class="muted">3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__left">

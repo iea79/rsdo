@@ -1,0 +1,36 @@
+.rezultList {
+    columns: 2;
+    max-width: 75.75em;
+
+    &__row {
+        display: flex;
+        margin-bottom: 0.4375em;
+    }
+
+    &__label {
+        color: #5B6271;
+        width: 14.375em;
+        flex: none;
+    }
+
+    &__prop {
+        b {
+            font-weight: 500;
+        }
+
+        .danger {
+            font-weight: 600;
+        }
+    }
+
+    &__back {
+        max-width: 18.75em;
+        margin-top: 1.6875em;
+
+        .btn {
+            width: 100%;
+        }
+
+    }
+
+}

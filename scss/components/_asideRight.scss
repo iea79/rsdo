@@ -1,8 +1,8 @@
 .asideRight {
     &__title {
         font-size: 1.5em;
-        line-height: 1.45;
-        margin-bottom: 0.4em;
+        line-height: 1.25;
+        margin-bottom: 0.8em;
     }
 
     &__body {
@@ -25,6 +25,17 @@
 
         a {
             font-size: 1.125em;
+        }
+    }
+
+    &__textfield {
+        margin-top: 1.25em;
+
+        textarea {
+            height: 9.125em;
+            width: 100%;
+            background: #FAFAFA;
+            border: 1px solid #C9C9C9;
         }
     }
 

@@ -1,0 +1,45 @@
+.table {
+    font-size: 14px;
+    max-width: 81.43em;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #F7F7F7;
+    box-shadow: 0 25px 45px -31px rgba(0, 0, 0, 0.1);
+
+    thead {
+        th {
+            border-bottom: 6px solid #F7F7F7;
+            font-weight: 300;
+            text-align: left;
+            color: #5B6271;
+            padding: 15px 20px;
+            line-height: 1;
+        }
+    }
+
+    tbody {
+        tr {
+            &:not(:last-child) {
+                td {
+                    border-bottom: 1px solid #F7F7F7;
+                }
+            }
+        }
+
+        td {}
+    }
+
+    td,
+    th {
+        background: $color_withe;
+        padding: 9px 20px 12px;
+
+        &:nth-child(n+2) {
+            border-left: 1px solid #F7F7F7;
+        }
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

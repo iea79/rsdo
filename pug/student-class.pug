@@ -1,0 +1,26 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Класс/учебная группа";
+
+block content
+    +breadcrumb(['Главная', 'Класс/учебная группа'])
+    .page__content
+        .page__body
+            .page__title Список класса 5А_СШ№123
+
+            .author
+                .author__photo
+                    img(src="img/teacher.png", alt="")
+                .author__content
+                    .author__name Федорищев Иван Петрович
+                    .author__prof Классный руководитель
+
+            table.table
+                thead.uppercase
+                    tr
+                        th ФИО
+                tbody
+                    each item in ['1. Аязбаев Ершат', '2. Басалбаев Серик', '3. Васильев Станислав', '4. Городищев Сергей', '5. Дуновец Ольга', '6. Жизневская Александра', '7. Шамильев Руслан', '8. Яремеев Ярослав']
+                        tr
+                            td=item
