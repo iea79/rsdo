@@ -2690,8 +2690,6 @@ html[data-browser*=flexible] .grid_nowrap {
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-=======
 .progressGrid {
   display: grid;
   grid-gap: 1.375em;
@@ -2743,7 +2741,6 @@ html[data-browser*=flexible] .grid_nowrap {
   color: #3E73EF;
 }
 
->>>>>>> tmp
 .singleSort {
   display: flex;
   align-items: center;
