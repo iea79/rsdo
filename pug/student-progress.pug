@@ -1,0 +1,22 @@
+extends layout/layout.pug
+
+block variables
+    - pageName = "Успеваемость";
+
+block content
+    +breadcrumb(['Главная', 'Успеваемость'])
+    .page__content
+        .page__body
+            .page__title Журналы оценки
+
+            .progressGrid
+                each progress in [ {img: '1', name: 'Математика_5Б_СОШ№29', rating: '4.2'}, {img: '7', name: 'Алгебра_8Б_СОШ№29', rating: '5'}, {img: '8', name: 'Геометрия_8Б_СОШ№29', rating: '3.4'}, {img: '1', name: 'Математика', rating: '4.6'} ]
+                    .progressGrid__item
+                        .progressGrid__head
+                            .progressGrid__subject=progress.name
+                            .progressGrid__img
+                                img(src="./img/courses_"+progress.img+".svg")
+                        .progressGrid__rating Средняя оценка: 
+                            span=progress.rating
+                        .progressGrid__bottom
+                            a.progressGrid__link(href="./student-progress-2.html") перейти

@@ -14,10 +14,10 @@
       <div class="aside__head"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
       <nav class="aside__nav">
         <ul class="navbar">
-          <li class="navbar__item"><a class="navbar__link active" href="home.html"><i class="icon_dashboard"> </i><span>Главная</span></a></li>
+          <li class="navbar__item"><a class="navbar__link" href="home.html"><i class="icon_dashboard"> </i><span>Главная</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_home"> </i><span>Домашняя</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_calendar"> </i><span>Календарь/расписание</span></a></li>
-          <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_speech"> </i><span>Успеваемость</span></a></li>
+          <li class="navbar__item"><a class="navbar__link active" href=""><i class="icon_speech"> </i><span>Успеваемость</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_social_media"> </i><span>Класс/учебная группа</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_pie_chart"> </i><span>Аналитика и отчеты</span></a></li>
           <li class="navbar__item"><a class="navbar__link" href=""><i class="icon_filter"> </i><span>Управление ОО</span></a></li>
@@ -42,7 +42,7 @@
     <main class="main">
       <header class="header">
         <div class="header__left">
-          <div class="header__title">Главная</div>
+          <div class="header__title">Успеваемость</div>
           <div class="header__sub">
             <div class="childList js-drop">
               <div class="childList__current">
@@ -65,20 +65,49 @@
         </div>
       </header>
       <div class="main__content">
-        <div class="page__title">Ученик</div>
-        <ul>
-          <li><a href="home.html">Главная</a></li>
-          <li><a href="student-course.html">Страница курса</a></li>
-          <li><a href="student-course-lk.html">Страница курса</a></li>
-          <li><a href="student-course-start.html">Страница перед началом тестирования</a></li>
-          <li><a href="student-test.html">Страница тестирования</a></li>
-          <li><a href="student-course-rezult.html">Страница результата тестирования</a></li>
-          <li><a href="student-course-end.html">Страница окончания теста</a></li>
-          <li><a href="student-class.html">Класс/учебная группа</a></li>
-          <li><a href="student-faq.html">Справочная информация</a></li>
-          <li><a href="student-progress.html">Успеваемость 1</a></li>
-          <li><a href="student-progress-2.html">Успеваемость 2</a></li>
+        <ul class="breadcrumb">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Успеваемость</a></li>
         </ul>
+        <div class="page__content">
+          <div class="page__body">
+            <div class="page__title">Журналы оценки</div>
+            <div class="progressGrid">
+              <div class="progressGrid__item">
+                <div class="progressGrid__head">
+                  <div class="progressGrid__subject">Математика_5Б_СОШ№29</div>
+                  <div class="progressGrid__img"><img src="./img/courses_1.svg"/></div>
+                </div>
+                <div class="progressGrid__rating">Средняя оценка: <span>4.2</span></div>
+                <div class="progressGrid__bottom"><a class="progressGrid__link" href="./student-progress-2.html">перейти</a></div>
+              </div>
+              <div class="progressGrid__item">
+                <div class="progressGrid__head">
+                  <div class="progressGrid__subject">Алгебра_8Б_СОШ№29</div>
+                  <div class="progressGrid__img"><img src="./img/courses_7.svg"/></div>
+                </div>
+                <div class="progressGrid__rating">Средняя оценка: <span>5</span></div>
+                <div class="progressGrid__bottom"><a class="progressGrid__link" href="./student-progress-2.html">перейти</a></div>
+              </div>
+              <div class="progressGrid__item">
+                <div class="progressGrid__head">
+                  <div class="progressGrid__subject">Геометрия_8Б_СОШ№29</div>
+                  <div class="progressGrid__img"><img src="./img/courses_8.svg"/></div>
+                </div>
+                <div class="progressGrid__rating">Средняя оценка: <span>3.4</span></div>
+                <div class="progressGrid__bottom"><a class="progressGrid__link" href="./student-progress-2.html">перейти</a></div>
+              </div>
+              <div class="progressGrid__item">
+                <div class="progressGrid__head">
+                  <div class="progressGrid__subject">Математика</div>
+                  <div class="progressGrid__img"><img src="./img/courses_1.svg"/></div>
+                </div>
+                <div class="progressGrid__rating">Средняя оценка: <span>4.6</span></div>
+                <div class="progressGrid__bottom"><a class="progressGrid__link" href="./student-progress-2.html">перейти</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__left">
