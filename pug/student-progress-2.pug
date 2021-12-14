@@ -27,6 +27,6 @@ block content
                 tbody
                     each item in [{name: 'Контрольная работа за 1 четверть', date: '12 ноября 2021', ball: '5'}, {name: 'Ответ в классе', date: '3 ноября 2021', ball: '4'}, {name: 'Срез за неделю', date: '13 октября 2021', ball: '2'}, {name: 'Ответ в классе', date: '5 сентября 2021', ball: '3'}]
                         tr
-                            td(style="width: 75%")=item.name
-                            td.muted=item.date
-                            td.muted=item.ball
+                            td(style="width: 75%" data-label="Задание")=item.name
+                            td.muted(data-label="Дата")=item.date
+                            td.muted(data-label="Оценка")=item.ball

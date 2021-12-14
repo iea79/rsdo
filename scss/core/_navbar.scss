@@ -6,6 +6,17 @@
 	list-style: none;
 	// display: flex;
 
+	@media (max-width: 767px) {
+		flex-grow: 1;
+		overflow: hidden auto;
+
+		&__open {
+			overflow: hidden;
+		}
+	}
+
+	@media (min-width: 768px) {}
+
 	&__item {
 		// display: inline-block;
 		margin: 0 -1px 1.35em 0;
@@ -19,10 +30,14 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		padding: 0.3em 1.8em 0.2em 3.8em;
+		padding: 0.3em 1.8em 0.2em 1.4em;
 		text-decoration: none;
 		color: $main_color;
 		line-height: 126.5%;
+
+		@media (min-width: 768px) {
+			padding: 0.3em 1.8em 0.2em 3.8em;
+		}
 
 		[class*="icon_"] {
 			font-size: 0.9em;
@@ -43,15 +58,18 @@
 	}
 
 	&__toggle {
+		display: none;
 		@media (max-width: 767px) {
-			position: absolute;
-			color: #00aed4;
+			display: block;
+			flex: none;
+			margin-right: 1.2em;
+			// position: absolute;
+			position: relative;
+			color: #1E59E1;
 			border-top: 0.2em solid;
 			border-bottom: 0.2em solid;
-			left: 1.3em;
-			top: 1.3em;
-			width: 2em;
-			height: 1.5em;
+			width: 1.5em;
+			height: 1.2em;
 			cursor: pointer;
 			z-index: 51;
 			transition: border-color 0.3s;

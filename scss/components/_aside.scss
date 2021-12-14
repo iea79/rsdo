@@ -1,18 +1,54 @@
 .aside {
     flex: none;
-    width: 18.75em;
     background: $color_withe;
     border-right: 0.125em solid #F7F7F7;
 
+    @media (min-width: 768px) {
+        width: 18.75em;
+    }
+
     &__head {
         border-bottom: 0.0625em solid #F7F7F7;
-        height: 8.44em;
         display: flex;
         align-items: center;
-        padding: 2.88em 3.75em 1.875em 3.95em;
+        // padding: 1.2em;
+
+        @media (min-width: 768px) {
+            height: 8.44em;
+            padding: 2.88em 3.75em 1.875em 3.95em;
+        }
     }
 
     &__nav {
-        padding: 1.7em 0;
+        padding: 4em 0 1.2em;
+        position: fixed;
+        overflow: hidden auto;
+        background: #fff;
+        z-index: 10;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 18.75em;
+        transition: left 0.4s;
+        display: flex;
+        flex-direction: column;
+
+        &.open {
+            left: 0;
+            box-shadow: 1em 1em 1em rgba(#000, 0.1);
+            border-right: 0.125em solid #F7F7F7;
+        }
+
+        @media (min-width: 768px) {
+            position: static;
+        }
+    }
+
+    .logo {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+            width: 8.6875em;
+        }
     }
 }

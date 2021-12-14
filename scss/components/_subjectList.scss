@@ -17,7 +17,7 @@
 
     &__head {
         background: #F3F3F3;
-        font-size: 1.125em;
+        font-size: 1em;
         font-weight: 500;
         line-height: 1.45;
         letter-spacing: 0.1em;
@@ -28,6 +28,10 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+        }
 
         &:after {
             font-family: 'rsdo';
@@ -48,14 +52,25 @@
         border: 1px solid #F7F7F7;
         border-bottom: 0;
         border-top: 0;
+        // max-width: 100%;
+
+        @media (max-width: 767px) {
+            // overflow: auto hidden;
+        }
     }
 
     &__table {
         border-collapse: collapse;
         width: 100%;
+        // min-width: 25em;
         // font-weight: 300;
+        @media (min-width: 768px) {}
 
         thead {
+            @media (max-width: 767px) {
+                display: none;
+            }
+
             th {
                 color: #5B6271;
                 font-weight: 300;
@@ -71,14 +86,41 @@
         }
 
         tbody {
+            tr {
+                @media (max-width: 767px) {
+                    display: block;
+                    border-bottom: 1px solid #F7F7F7;
+                    padding-bottom: 0.7em;
+                }
+            }
+
             td {
-                padding: 0.7em 1.2em;
-                border-bottom: 1px solid #F7F7F7;
-                height: 5.2em;
+                padding: 1em;
                 vertical-align: top;
 
+                @media (min-width: 768px) {
+                    border-bottom: 1px solid #F7F7F7;
+                    padding: 0.7em 1.2em;
+                    height: 5.2em;
+                }
+
+                @media (max-width: 767px) {
+                    display: block;
+                    padding-bottom: 0.7em;
+
+                    &:before {
+                        content: attr(data-label);
+                        display: block;
+                        font-weight: 500;
+                        margin-bottom: 0.2em;
+
+                    }
+                }
+
                 &:nth-child(n+2) {
-                    border-left: 1px solid #F7F7F7;
+                    @media (min-width: 768px) {
+                        border-left: 1px solid #F7F7F7;
+                    }
                 }
 
                 &.thin {

@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     color: #8E939E;
+    margin-bottom: 1.5em;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
 
     a {
         color: #8E939E;

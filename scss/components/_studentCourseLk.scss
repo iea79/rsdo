@@ -1,20 +1,29 @@
 .studentLk {
     &__action {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         margin-bottom: 1.875em;
 
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .courseList {
-            margin: 0;
+            margin: 0 0 1.5em;
             padding: 0;
             list-style: none;
 
             display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            @media (min-width: 768px) {
+                margin: 0;
+                gap: 1.25em;
+            }
 
             &__item {
-                margin-right: 1.25em;
+                // margin-right: 1.25em;
 
                 &:last-child {
                     margin-right: 0;
@@ -41,6 +50,8 @@
                 background-color: #EFEFEF;
                 padding: 0.788em 1.072em;
                 font-size: 0.875em;
+                display: inline-flex;
+                align-items: center;
                 cursor: pointer;
 
                 transition: background-color 0.3s;
@@ -74,13 +85,16 @@
 }
 
 .courses {
-    display: grid;
-    grid-gap: 1.375em;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(10.313em, auto);
+    display: flex;
+    gap: 1.375em;
+    flex-wrap: wrap;
 
     &__item {
         position: relative;
+
+        min-width: 15.625em;
+        flex-grow: 1;
+        width: calc(25% - 1.375em);
 
         display: flex;
         flex-direction: column;
@@ -95,6 +109,11 @@
     &__head {
         font-size: 0.875em;
         margin-right: 2em;
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
         i {
             color: $color_primary;
@@ -108,14 +127,20 @@
     }
 
     &__body {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0;
+        }
     }
 
     &__left {
         display: flex;
         align-items: center;
+        margin-right: 1em;
 
     }
 
@@ -129,12 +154,23 @@
     &__img {
         width: 2.188em;
         height: 2.188em;
+        flex: none;
+
+        img {
+            display: block;
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__right {
         font-size: 0.813em;
         line-height: 1.0763em;
-        text-align: right;
+
+        @media (min-width: 768px) {
+            text-align: right;
+        }
     }
 
     &__label {

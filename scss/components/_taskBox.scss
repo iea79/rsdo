@@ -1,11 +1,17 @@
 .taskBox {
     box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
-    padding: 1.875em;
+    padding: 1.2em;
     background: $color_withe;
 
+    @media (min-width: 768px) {
+        padding: 1.875em;
+    }
+
     &__head {
-        display: flex;
-        align-items: center;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__steps {
@@ -14,6 +20,12 @@
         padding: 0.44em 1.04em;
         font-size: 0.875em;
         color: #888;
+        display: inline-block;
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
         b {
             font-weight: 600;
@@ -29,7 +41,11 @@
     }
 
     &__question {
-        font-size: 1.5em;
+        font-size: 1.25em;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
     }
 
     &__resp {
@@ -43,14 +59,24 @@
     &__footer {
         background: #F7F7F7;
         margin: 0 -1.875em -1.875em;
-        padding: 2.125em 1.875em;
+        padding: 1.2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+
+        @media (min-width: 768px) {
+            gap: 2em;
+            padding: 2.125em 1.875em;
+        }
 
         .btn {
-            margin-right: 2em;
+            // margin-right: 2em;
 
             &_thin {
-                width: 100%;
-                max-width: 15.7em;
+                @media (min-width: 768px) {
+                    width: 100%;
+                    max-width: 15.7em;
+                }
             }
         }
     }

@@ -1,26 +1,37 @@
 .page {
     &__title {
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-weight: 400;
         margin: 0 0 0.65em;
         display: flex;
         align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+        }
     }
 
     &__content {
-        display: flex;
-        gap: 1.75em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 1.75em;
+        }
     }
 
     &__body {
-        min-width: 0;
-        flex-grow: 1;
+        @media (min-width: 768px) {
+            min-width: 0;
+            flex-grow: 1;
+        }
     }
 
     &__head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__aside {}

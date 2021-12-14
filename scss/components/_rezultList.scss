@@ -1,16 +1,32 @@
 .rezultList {
-    columns: 2;
-    max-width: 75.75em;
+
+    @media (min-width: 768px) {
+        columns: 2;
+        max-width: 75.75em;
+    }
 
     &__row {
         display: flex;
-        margin-bottom: 0.4375em;
+        margin-bottom: 0.6em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.4375em;
+
+        }
+
+        @media (max-width: 767px) {
+            justify-content: space-between;
+        }
     }
 
     &__label {
         color: #5B6271;
-        width: 14.375em;
-        flex: none;
+        padding-right: 1em;
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 14.375em;
+        }
     }
 
     &__prop {
@@ -21,11 +37,18 @@
         .danger {
             font-weight: 600;
         }
+
+        @media (max-width: 767px) {
+            text-align: right;
+        }
     }
 
     &__back {
-        max-width: 18.75em;
         margin-top: 1.6875em;
+
+        @media (min-width: 768px) {
+            max-width: 18.75em;
+        }
 
         .btn {
             width: 100%;

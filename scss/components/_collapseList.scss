@@ -70,12 +70,16 @@
     &__label,
     &__name {
         flex: none;
-        width: 16.7em;
         padding-right: 0.85em;
-        font-size: 1.25em;
+        font-size: 1.1em;
         line-height: 1.45;
         display: flex;
         align-items: center;
+
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+            width: 16.7em;
+        }
 
         &_short {
             width: auto;
@@ -97,8 +101,12 @@
     }
 
     &__body {
-        padding: 1.25em;
+        padding: 1em;
         display: none;
+
+        @media (min-width: 768px) {
+            padding: 1.25em;
+        }
     }
 
     &__bage {

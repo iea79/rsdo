@@ -51,6 +51,17 @@ $(window).resize(function(event) {
 function checkOnResize() {
 }
 
+function openMobileNav() {
+    $('.navbar__toggle').on('click', function() {
+        let wrapp = $('.aside__nav');
+
+        $('body').toggleClass('navbar__open');
+        $(this).toggleClass('active');
+        wrapp.toggleClass('open');
+    });
+}
+openMobileNav();
+
 // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 function srollToId() {
     $('[data-scroll-to]').click( function(){

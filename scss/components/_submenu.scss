@@ -11,13 +11,17 @@
     }
 
     &__item {
-        padding: 0 3.7em;
+        padding: 0 1.2em;
+
+        @media (min-width: 768px) {
+            padding: 0 3.7em;
+        }
     }
 
     &__drop {
         display: none;
 
-        .open & {
+        .submenu.open & {
             display: block;
         }
 
@@ -53,7 +57,7 @@
         margin-bottom: 0.5em;
         cursor: pointer;
 
-        .open & {
+        .submenu.open & {
             color: #1E59E1;
         }
 
@@ -69,7 +73,7 @@
             font-size: 0.3em;
             margin-left: 1.3em;
 
-            .open & {
+            .submenu.open & {
                 transform: rotate(180deg);
             }
         }

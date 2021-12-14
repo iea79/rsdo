@@ -7,10 +7,14 @@
 
     &__body {
         background: $color_withe;
-        padding: 1.5em 1.25em 2.25em;
-        width: 23.5em;
+        padding: 1.2em;
         border: 0.0625em solid #F7F7F7;
         box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
+
+        @media (min-width: 768px) {
+            padding: 1.5em 1.25em 2.25em;
+            width: 23.5em;
+        }
     }
 
     &__list {

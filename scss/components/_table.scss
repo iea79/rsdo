@@ -1,12 +1,19 @@
 .table {
-    font-size: 14px;
     max-width: 81.43em;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #F7F7F7;
-    box-shadow: 0 25px 45px -31px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 768px) {
+        font-size: 0.875em;
+        border: 1px solid #F7F7F7;
+        box-shadow: 0 25px 45px -31px rgba(0, 0, 0, 0.1);
+    }
 
     thead {
+        @media (max-width: 767px) {
+            display: none;
+        }
+
         th {
             border-bottom: 6px solid #F7F7F7;
             font-weight: 300;
@@ -19,20 +26,46 @@
 
     tbody {
         tr {
-            &:not(:last-child) {
-                td {
-                    border-bottom: 1px solid #F7F7F7;
+            @media (max-width: 767px) {
+                background: #fff;
+                display: block;
+                border-bottom: 1px solid #F7F7F7;
+                margin-bottom: 1em;
+                padding: 0.6em 0;
+                box-shadow: 0 25px 45px -31px rgba(0, 0, 0, 0.1);
+            }
+
+            @media (min-width: 768px) {
+                &:not(:last-child) {
+                    td {
+                        border-bottom: 1px solid #F7F7F7;
+                    }
                 }
             }
         }
 
-        td {}
+        td {
+            @media (max-width: 767px) {
+                display: block;
+
+                &:before {
+                    content: attr(data-label);
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
     }
 
     td,
     th {
         background: $color_withe;
-        padding: 9px 20px 12px;
+        padding: 0.6em 1.2em;
+
+        @media (min-width: 768px) {
+            padding: 0.5625em 1.25em 0.75em;
+        }
 
         &:nth-child(n+2) {
             border-left: 1px solid #F7F7F7;

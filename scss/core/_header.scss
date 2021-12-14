@@ -1,13 +1,17 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 0.625em 2.8em 0.625em 1.875em;
+	padding: 0.625em 1.2em;
 	background-color: $color_withe;
 	border-bottom: 0.0625em solid #F7F7F7;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 80px;
+
+	@media (min-width: 768px) {
+		padding: 0.625em 2.8em 0.625em 1.875em;
+		min-height: 80px;
+	}
 
 	&__left {
 		display: flex;
@@ -20,12 +24,22 @@
 	}
 
 	&__title {
-		font-size: 2em;
+		display: none;
+		font-size: 1.5em;
 		font-weight: 400;
 		margin: 0 1em 0 0;
+
+		@media (min-width: 768px) {
+			display: block;
+			font-size: 2em;
+		}
 	}
 
-	&__sub {}
+	&__sub {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
 
 	&__right {
 		display: flex;
@@ -40,8 +54,13 @@
 		[class*="icon_"] {
 			color: #C9C9C9;
 			text-decoration: none;
-			font-size: 1.3125em;
-			margin-right: 1.4em;
+			font-size: 1.25em;
+			margin-right: 1em;
+
+			@media (min-width: 768px) {
+				font-size: 1.3125em;
+				margin-right: 1.4em;
+			}
 
 			&:hover {
 				color: rgba(30, 89, 225, 0.5);
@@ -61,9 +80,12 @@
 			font-family: 'rsdo';
 			content: $icon_caret_down;
 			font-size: 0.4em;
-			margin-left: 3.2em;
 			position: relative;
-			top: -0.8em;
+
+			@media (min-width: 768px) {
+				top: -0.8em;
+				margin-left: 3.2em;
+			}
 		}
 
 		&.open {
@@ -94,7 +116,11 @@
 			}
 		}
 
-		&Descr {}
+		&Descr {
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
 
 		&Name {
 			font-size: 1.125em;
@@ -111,12 +137,22 @@
 			position: absolute;
 			margin-top: 0.9em;
 			top: 100%;
-			left: 0;
+			left: auto;
+			right: 0;
 			background: #FFFFFF;
 			border: 0.0625em solid #F7F7F7;
 			box-sizing: border-box;
 			box-shadow: 0 1.5625em 2.8125em rgba(0, 0, 0, 0.05);
-			width: 100%;
+			// width: 9.38em;
+			white-space: nowrap;
+
+			@media (min-width: 768px) {
+				width: 100%;
+				left: 0;
+				right: auto;
+				white-space: normal;
+
+			}
 		}
 
 		&Link {
@@ -127,7 +163,11 @@
 
 			i {
 				color: #1E59E1;
-				margin-right: 0.85em;
+				margin-right: 0.5em;
+
+				@media (min-width: 768px) {
+					margin-right: 0.85em;
+				}
 			}
 		}
 	}

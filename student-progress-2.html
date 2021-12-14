@@ -42,6 +42,7 @@
     <main class="main">
       <header class="header">
         <div class="header__left">
+          <div class="navbar__toggle"></div>
           <div class="header__title">Успеваемость</div>
           <div class="header__sub">
             <div class="childList js-drop">
@@ -60,7 +61,7 @@
               <div class="header__userName">Светлана Абрамчук</div>
               <div class="header__userInfo">Родитель (детей 3)</div>
             </div>
-            <div class="header__userDrop js-drop-list"><a class="header__userLink" href=""><i class="icon_exit"> </i><span>Выход из аккаунта</span></a></div>
+            <div class="header__userDrop js-drop-list"><a class="header__userLink" href=""><i class="icon_exit"> </i><span>Выход <span class="desktop">из аккаунта</span></span></a></div>
           </div>
         </div>
       </header>
@@ -90,24 +91,24 @@
               </thead>
               <tbody>
                 <tr>
-                  <td style="width: 75%">Контрольная работа за 1 четверть</td>
-                  <td class="muted">12 ноября 2021</td>
-                  <td class="muted">5</td>
+                  <td style="width: 75%" data-label="Задание">Контрольная работа за 1 четверть</td>
+                  <td class="muted" data-label="Дата">12 ноября 2021</td>
+                  <td class="muted" data-label="Оценка">5</td>
                 </tr>
                 <tr>
-                  <td style="width: 75%">Ответ в классе</td>
-                  <td class="muted">3 ноября 2021</td>
-                  <td class="muted">4</td>
+                  <td style="width: 75%" data-label="Задание">Ответ в классе</td>
+                  <td class="muted" data-label="Дата">3 ноября 2021</td>
+                  <td class="muted" data-label="Оценка">4</td>
                 </tr>
                 <tr>
-                  <td style="width: 75%">Срез за неделю</td>
-                  <td class="muted">13 октября 2021</td>
-                  <td class="muted">2</td>
+                  <td style="width: 75%" data-label="Задание">Срез за неделю</td>
+                  <td class="muted" data-label="Дата">13 октября 2021</td>
+                  <td class="muted" data-label="Оценка">2</td>
                 </tr>
                 <tr>
-                  <td style="width: 75%">Ответ в классе</td>
-                  <td class="muted">5 сентября 2021</td>
-                  <td class="muted">3</td>
+                  <td style="width: 75%" data-label="Задание">Ответ в классе</td>
+                  <td class="muted" data-label="Дата">5 сентября 2021</td>
+                  <td class="muted" data-label="Оценка">3</td>
                 </tr>
               </tbody>
             </table>

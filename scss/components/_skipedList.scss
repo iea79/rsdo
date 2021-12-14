@@ -10,7 +10,13 @@
         box-sizing: border-box;
         box-shadow: 0 1.5625em 2.8125em -1.9375em rgba(0, 0, 0, 0.1);
         padding: 0.76em 1.2em 1.4em;
-        width: calc(33.3% - 1.875em);
+        flex-basis: 14em;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            width: calc(33.3% - 1.875em);
+            flex: none;
+        }
     }
 
     &__title {
@@ -34,7 +40,11 @@
     }
 
     &__more {
-        margin-top: 1.9em;
+        margin: 1.9em 0;
+        @media (min-width: 768px) {
+            margin: 1.9em 0 0;
+
+        }
     }
 
 }
