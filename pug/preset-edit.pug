@@ -1,0 +1,95 @@
+extends layout/layout.pug
+
+block content
+    +breadcrumb(['Главная', 'Редактирование пресета'])
+    .page__content
+        .page__body
+            .page__title Редактирование пресета
+
+            .whiteBox
+                .whiteBox__title Общая информация
+                .whiteBox__form
+                    .form__row.form__row_inline
+                        .form__label Название
+                        input(type="text", placeholder="Пресет №1")
+                    .form__row.form__row_inline
+                        .form__label Тип работы
+                        input(type="text", placeholder="Сочинение")
+
+            .whiteBox
+                .whiteBox__head
+                    .whiteBox__title Краткое оценочное суждение
+                    a(href="" data-toggle="modal" data-target="#presetModal") Изменить параметры суждения
+
+                .whiteBox__body
+                    .presets
+                        .presets__head
+                            .presets__col
+                                .presets__label Оценка
+                            .presets__col
+                                .presets__label Орфографические/пунктуационные ошибки
+                        .presets__body
+                            .presets__row
+                                .presets__col 5
+                                .presets__col
+                                    .presets__field
+                                        span 0/0
+                                        span 0/1
+                            .presets__row
+                                .presets__col 4
+                                .presets__col
+                                    .presets__field
+                                        each item in ['0/2', '0/3', '0/4', '1/0', '1/1', '1/2', '1/3', '2/0', '2/1', '2/2']
+                                            span=item
+                            .presets__row
+                                .presets__col 3
+                                .presets__col
+                                    .presets__field
+                                        each item in ['0/5', '0/6', '0/7', '0/8', '1/4', '1/5', '1/6', '1/7', '2/3', '2/4', '2/5', '2/6', '3/0', '3/1', '3/2', '3/3', '3/5', '4/0', '4/1', '4/2', '4/4']
+                                            span=item
+            .page__footer
+                button.btn Сохранить
+                button.btn.btn_link Отменить
+
+
+    // Begin Modal presetModal
+    .modal.fade.presetModal#presetModal
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-header
+                    .modal-title Параметры оценочного суждения
+                    .modal-sub Введите количество орфографических и пунктуационных ошибок через “/”, разделяя варианты запятой.
+                .modal-body 
+                    .presets
+                        .presets__head
+                            .presets__col
+                                .presets__label Оценка
+                            .presets__col
+                                .presets__label Орфографические/пунктуационные ошибки
+                        .presets__body
+                            .presets__row
+                                .presets__col 5
+                                .presets__col
+                                    .presets__field
+                                        span 0/0
+                                        span 0/1
+                                        input(type="text")
+                            .presets__row
+                                .presets__col 4
+                                .presets__col
+                                    .presets__field
+                                        each item in ['0/2', '0/3', '0/4', '1/0', '1/1', '1/2', '1/3', '2/0', '2/1', '2/2']
+                                            span=item
+                                        input(type="text")
+                            .presets__row
+                                .presets__col 3
+                                .presets__col
+                                    .presets__field
+                                        each item in ['0/5', '0/6', '0/7', '0/8', '1/4', '1/5', '1/6', '1/7', '2/3', '2/4', '2/5', '2/6', '3/0', '3/1', '3/2', '3/3', '3/5', '4/0', '4/1', '4/2', '4/4']
+                                            span=item
+                                        input(type="text" value="4/")
+                .modal-footer 
+                    button.btn Сохранить
+                    button.btn.btn_link Отменить
+    // End modal presetModal

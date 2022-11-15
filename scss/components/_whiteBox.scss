@@ -7,4 +7,22 @@
     @media (min-width: 768px) {
         padding: 1.875em 1.875em 2.5em;
     }
+
+    &__title {
+        font-size: 1.25em;
+        margin-bottom: 1em;
+
+        @media (min-width: 768px) {}
+    }
+
+    &__head {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: baseline;
+
+            .whiteBox__title {
+                margin-right: 1.1em;
+            }
+        }
+    }
 }
